@@ -1,19 +1,25 @@
 class Solution {
     public int subarraySum(int[] nums, int k) {
-        HashMap<Integer, Integer> subNum = new HashMap<>();
-        subNum.put(0, 1);
-        int total = 0, count = 0;
+        
+        HashMap<Integer,Integer> hm = new HashMap<>();
 
-        for (int n : nums) {
-            total += n;
+        int prefixsum=0;
 
-            if (subNum.containsKey(total - k)) {
-                count += subNum.get(total - k);
+        int count=0;
+
+        hm.put(0,1);
+
+        for(int i=0;i<nums.length;i++){
+            prefixsum+=nums[i];
+
+            int remove = prefixsum-k;
+
+            if(hm.containsKey(remove)){
+                count+=hm.get(remove);
             }
 
-            subNum.put(total, subNum.getOrDefault(total, 0) + 1);
+            hm.put(prefixsum, hm.getOrDefault(prefixsum,0)+1);
         }
-
         return count;
     }
 }
