@@ -3,7 +3,7 @@ class Solution {
         Arrays.sort(nums);
 
         List<List<Integer>> ans = new ArrayList<>();
-        int j = 1, k = 2;
+        // int j = 1, k = 2;
         long rSum;
         for (int a = 0; a < nums.length - 3; a++) {
             if (a > 0 && nums[a] == nums[a - 1])
@@ -12,8 +12,8 @@ class Solution {
                 if (i > a + 1 && nums[i] == nums[i - 1])
                     continue;
 
-                j = i + 1;
-                k = nums.length - 1;
+                int j = i + 1;
+                int k = nums.length - 1;
 
                 rSum = (long) target - nums[i] - nums[a];
 
