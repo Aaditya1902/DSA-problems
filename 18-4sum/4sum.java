@@ -5,10 +5,10 @@ class Solution {
         List<List<Integer>> ans = new ArrayList<>();
         // int j = 1, k = 2;
         long rSum;
-        for (int a = 0; a < nums.length ; a++) {
+        for (int a = 0; a < nums.length - 3; a++) {
             if (a > 0 && nums[a] == nums[a - 1])
                 continue;
-            for (int i = a + 1; i < nums.length ; i++) {
+            for (int i = a + 1; i < nums.length - 2; i++) {
                 if (i > a + 1 && nums[i] == nums[i - 1])
                     continue;
 
