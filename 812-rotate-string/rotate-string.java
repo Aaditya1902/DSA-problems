@@ -4,5 +4,5 @@ class Solution {
             return false;
         }
         return (s + s).contains(goal);
-    }
+    } 
 }
