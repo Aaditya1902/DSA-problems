@@ -9,17 +9,20 @@
  *     }
  * }
  */
-
 public class Solution {
     public boolean hasCycle(ListNode head) {
-        ListNode slowPtr=head;
-        ListNode fastPtr=head;
+        ListNode slowptr=new ListNode();
+        ListNode fastptr = new ListNode();
 
-        while (slowPtr!=null && fastPtr!=null && fastPtr.next!=null){
-            slowPtr=slowPtr.next;
-            fastPtr=fastPtr.next.next;
+        slowptr=head;
+        fastptr=head;
 
-            if(slowPtr==fastPtr){
+        
+
+        while(fastptr!=null && fastptr.next!=null){
+            slowptr=slowptr.next;
+            fastptr=fastptr.next.next;
+            if(slowptr==fastptr){
                 return true;
             }
         }
