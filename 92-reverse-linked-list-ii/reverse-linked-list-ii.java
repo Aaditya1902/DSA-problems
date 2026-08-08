@@ -44,7 +44,7 @@ class Solution {
 
             left.next = sp;
 
-            return prev;
+            return right;
         }
         ListNode fp=head;
 
