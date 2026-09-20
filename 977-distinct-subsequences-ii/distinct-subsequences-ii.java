@@ -9,7 +9,7 @@ class Solution {
             long newDp = (2*dp% MOD - last[idx] + MOD) % MOD;
             last[idx] = dp;
             dp=newDp;
-        }
+        }   
         return (int) ((dp-1+MOD)%MOD);
     }
 }
