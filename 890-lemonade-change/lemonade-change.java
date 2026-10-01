@@ -25,7 +25,7 @@ class Solution {
                     five=five-3;
                 }else{
                     res=false;
-                    break;
+                    break; 
                 }
             }
         }
