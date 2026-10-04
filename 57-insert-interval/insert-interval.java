@@ -7,10 +7,6 @@ class Solution {
         int i=0;
         int n=intervals.length;
 
-        // if(n<1){
-        //     merged.add(newInterval);
-        //     return merged.toArray(new int[merged.size()][]);
-        // }
         while(i<n && intervals[i][1]  < newInterval[0]){
             merged.add(intervals[i]);
             i++;
